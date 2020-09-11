@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black"
+    tools:context=".ui.submission.SubmitActivity">
+
+<!--    <include-->
+<!--        android:id="@+id/layout_toolbar_submission"-->
+<!--        layout="@layout/custom_submit_toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/layout_submission_title_label"-->
+<!--        layout="@layout/layout_submission_title"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/layout_toolbar_submission" />-->
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_weight="1"
+            android:id="@+id/firstNameInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:hint="First Name"
+            app:boxBackgroundColor="@android:color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_weight="1"
+            android:id="@+id/secondNameInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:hint="Second Name"
+            app:boxBackgroundColor="@android:color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/secondName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:hint="Email Address"
+        app:boxBackgroundColor="@android:color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/githubInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:hint="Project on GITHUB (link)"
+        app:boxBackgroundColor="@android:color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/projectOnGithub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Submit"
+        android:layout_gravity="center_horizontal"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/google_yellow" />
+
+
+</LinearLayout>
